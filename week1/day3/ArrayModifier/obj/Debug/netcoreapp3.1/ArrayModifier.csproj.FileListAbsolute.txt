@@ -1,0 +1,11 @@
+C:\revature\week1\day3\ArrayModifier\obj\Debug\netcoreapp3.1\ArrayModifier.csprojAssemblyReference.cache
+C:\revature\week1\day3\ArrayModifier\obj\Debug\netcoreapp3.1\ArrayModifier.AssemblyInfoInputs.cache
+C:\revature\week1\day3\ArrayModifier\obj\Debug\netcoreapp3.1\ArrayModifier.AssemblyInfo.cs
+C:\revature\week1\day3\ArrayModifier\bin\Debug\netcoreapp3.1\ArrayModifier.exe
+C:\revature\week1\day3\ArrayModifier\bin\Debug\netcoreapp3.1\ArrayModifier.deps.json
+C:\revature\week1\day3\ArrayModifier\bin\Debug\netcoreapp3.1\ArrayModifier.runtimeconfig.json
+C:\revature\week1\day3\ArrayModifier\bin\Debug\netcoreapp3.1\ArrayModifier.runtimeconfig.dev.json
+C:\revature\week1\day3\ArrayModifier\bin\Debug\netcoreapp3.1\ArrayModifier.dll
+C:\revature\week1\day3\ArrayModifier\bin\Debug\netcoreapp3.1\ArrayModifier.pdb
+C:\revature\week1\day3\ArrayModifier\obj\Debug\netcoreapp3.1\ArrayModifier.dll
+C:\revature\week1\day3\ArrayModifier\obj\Debug\netcoreapp3.1\ArrayModifier.pdb
