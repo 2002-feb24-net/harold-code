@@ -1,0 +1,11 @@
+C:\revature\week1\day3\StringStuff\bin\Debug\netcoreapp3.1\StringStuff.exe
+C:\revature\week1\day3\StringStuff\bin\Debug\netcoreapp3.1\StringStuff.deps.json
+C:\revature\week1\day3\StringStuff\bin\Debug\netcoreapp3.1\StringStuff.runtimeconfig.json
+C:\revature\week1\day3\StringStuff\bin\Debug\netcoreapp3.1\StringStuff.runtimeconfig.dev.json
+C:\revature\week1\day3\StringStuff\bin\Debug\netcoreapp3.1\StringStuff.dll
+C:\revature\week1\day3\StringStuff\bin\Debug\netcoreapp3.1\StringStuff.pdb
+C:\revature\week1\day3\StringStuff\obj\Debug\netcoreapp3.1\StringStuff.csprojAssemblyReference.cache
+C:\revature\week1\day3\StringStuff\obj\Debug\netcoreapp3.1\StringStuff.AssemblyInfoInputs.cache
+C:\revature\week1\day3\StringStuff\obj\Debug\netcoreapp3.1\StringStuff.AssemblyInfo.cs
+C:\revature\week1\day3\StringStuff\obj\Debug\netcoreapp3.1\StringStuff.dll
+C:\revature\week1\day3\StringStuff\obj\Debug\netcoreapp3.1\StringStuff.pdb
