@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\revature\\week1\\day4\\Substrings\\Substrings.csproj",
+      "projectUniqueName": "c:\\revature\\harold-code\\week1\\day4\\Substrings\\Substrings.csproj",
       "projectName": "Substrings",
-      "projectPath": "C:\\revature\\week1\\day4\\Substrings\\Substrings.csproj",
+      "projectPath": "c:\\revature\\harold-code\\week1\\day4\\Substrings\\Substrings.csproj",
       "packagesPath": "C:\\Users\\harol\\.nuget\\packages\\",
-      "outputPath": "C:\\revature\\week1\\day4\\Substrings\\obj\\",
+      "outputPath": "c:\\revature\\harold-code\\week1\\day4\\Substrings\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\harol\\AppData\\Roaming\\NuGet\\NuGet.Config",
