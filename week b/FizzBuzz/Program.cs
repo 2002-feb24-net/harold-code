@@ -113,7 +113,7 @@ namespace FizzBuzz
 
         static int CountFizzbuzz (int num)
         {
-            string fizzBuzzOrNothing = GetFizz(num);
+            string fizzBuzzOrNothing = GetFizzbuzz(num);
 
             if (fizzBuzzOrNothing == "Fizzbuzz")
                 return 1;
