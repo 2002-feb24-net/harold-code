@@ -63,16 +63,21 @@ namespace RockPaperScissors
 
         public void PrintSummary()
         {
-            for (int i = 0; i < WinRecord.Count; i++)
+            for (int i = 0; i < WinRecord.Count; i++)   // print round by round recap
             {
                 System.Console.WriteLine("Round " + (i + 1) + ": ");
                 // start at round 1
                 System.Console.WriteLine(WinRecord[i]);
             }
+
+            // amount of wins
+
             System.Console.WriteLine("--------------------------");
             System.Console.WriteLine("Player won: " + PlayerWins + " times");
             System.Console.WriteLine("Player tied: " + Ties + " times");
             System.Console.WriteLine("Player lost: " + ComputerWins + " times");
+
+            // print final winner (or print tie)
 
             if (PlayerWins > ComputerWins)
             {
