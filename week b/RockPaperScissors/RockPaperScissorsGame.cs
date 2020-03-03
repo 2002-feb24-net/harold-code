@@ -33,6 +33,19 @@ namespace RockPaperScissors
             CompChoice = RandomCompChoice();
         }
 
+        public void PlayRound() // main function
+        {
+            for (int i = 0; i < WinRecord.Length; i++)
+            {
+                GetInput();
+                SetCompChoice();    // new random choice
+                OutputCompChoice();
+                WinRecord[i] = WhoWon();
+            }
+            PrintSummary();
+
+        }
+
         public void GetInput()
         {
             System.Console.WriteLine("Playing round!"
@@ -60,19 +73,6 @@ namespace RockPaperScissors
             System.Console.WriteLine("Player won: " + PlayerWins + " times");
             System.Console.WriteLine("Player tied: " + Ties + " times");
             System.Console.WriteLine("Player lost: " + ComputerWins + " times");
-        }
-
-        public void PlayRound()
-        {
-            for (int i = 0; i < WinRecord.Length; i++)
-            {
-                GetInput();
-                SetCompChoice();    // new random choice
-                OutputCompChoice();
-                WinRecord[i] = WhoWon();
-            }
-            PrintSummary();
-
         }
 
 
