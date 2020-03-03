@@ -70,6 +70,13 @@ namespace RockPaperScissors
                 System.Console.WriteLine(WinRecord[i]);
             }
 
+            /* required foreach (works if uncomment)
+            foreach (var item in WinRecord)
+            {
+                System.Console.WriteLine(item);   
+            }*/
+
+
             // amount of wins
 
             System.Console.WriteLine("--------------------------");
@@ -94,6 +101,8 @@ namespace RockPaperScissors
                 System.Console.WriteLine("======================");
                 System.Console.WriteLine("You tied! Great match.");
             }
+
+            
 
         }
 
