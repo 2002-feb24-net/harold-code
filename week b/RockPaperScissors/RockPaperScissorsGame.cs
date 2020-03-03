@@ -1,4 +1,5 @@
 using System; // fixes the "error" of typing just "Console" and not "System.Console"
+using System.Collections.Generic;
 
 namespace RockPaperScissors
 {
@@ -8,8 +9,7 @@ namespace RockPaperScissors
         int ComputerWins;
         int Ties;
 
-        public string[] WinRecord = new string[5];
-        // max 5 rounds
+        List<string> WinRecord = new List<string>();
 
         public string PlayerChoice;
         public string CompChoice;
@@ -35,12 +35,12 @@ namespace RockPaperScissors
 
         public void PlayRound() // main function
         {
-            for (int i = 0; i < WinRecord.Length; i++)
+            for (int i = 0; i < 6; i++) //max 6 rounds
             {
                 GetInput();
                 SetCompChoice();    // new random choice
                 OutputCompChoice();
-                WinRecord[i] = WhoWon();
+                WinRecord.Add( WhoWon() );
             }
             PrintSummary();
 
@@ -63,7 +63,7 @@ namespace RockPaperScissors
 
         public void PrintSummary()
         {
-            for (int i = 0; i < WinRecord.Length; i++)
+            for (int i = 0; i < WinRecord.Count; i++)
             {
                 System.Console.WriteLine("Round " + (i + 1) + ": ");
                 // start at round 1
@@ -73,6 +73,23 @@ namespace RockPaperScissors
             System.Console.WriteLine("Player won: " + PlayerWins + " times");
             System.Console.WriteLine("Player tied: " + Ties + " times");
             System.Console.WriteLine("Player lost: " + ComputerWins + " times");
+
+            if (PlayerWins > ComputerWins)
+            {
+                System.Console.WriteLine("======================");
+                System.Console.WriteLine("You won!");
+            }
+            else if (PlayerWins < ComputerWins)
+            {
+                System.Console.WriteLine("======================");
+                System.Console.WriteLine("Computer won. Better luck next time");
+            }
+            else
+            {
+                System.Console.WriteLine("======================");
+                System.Console.WriteLine("You tied! Great match.");
+            }
+
         }
 
 
