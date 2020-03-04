@@ -20,6 +20,7 @@ namespace RockPaperScissors
                 }
                 else
                 {
+                    System.Console.WriteLine();
                     game.PlayRound();
                 }
             }

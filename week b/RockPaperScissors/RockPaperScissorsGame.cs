@@ -5,16 +5,16 @@ namespace RockPaperScissors
 {
     class RockPaperScissorsGame
     {
-        int PlayerWins;
-        int ComputerWins;
-        int Ties;
+        private int PlayerWins;
+        private int ComputerWins;
+        private int Ties;
 
         List<string> WinRecord = new List<string>();
 
-        public string PlayerChoice;
-        public string CompChoice;
+        private string PlayerChoice;
+        private string CompChoice;
 
-        public string RandomCompChoice()
+        string RandomCompChoice()
         {
             string[] choice = { "rock", "paper", "scissors" };
             Random Random = new Random();
@@ -46,7 +46,7 @@ namespace RockPaperScissors
 
         }
 
-        public void GetInput()
+        void GetInput()
         {
             System.Console.WriteLine("Playing round!"
             + "\n" +
@@ -54,7 +54,7 @@ namespace RockPaperScissors
             PlayerChoice = Console.ReadLine(); // can set bad input
         }
 
-        public void OutputCompChoice()
+        void OutputCompChoice()
         {
             System.Console.WriteLine("Computer chose to play:");
             System.Console.WriteLine(CompChoice);
@@ -107,7 +107,7 @@ namespace RockPaperScissors
         }
 
 
-        public string WhoWon()
+        string WhoWon()
         {
             if (PlayerChoice == "rock")
             {
