@@ -27,10 +27,13 @@ namespace Matrices
                 
                 for (int j = 0; j < matrix[i].Count; j++)
                 {
-                    System.Console.WriteLine("Enter number for row " + j + " of column " + i);
+                    for (int k = 0; k < matrix[i].Count; k++)
+                    {
+                    System.Console.WriteLine("Enter number for row " + i + " of column " + j);
                     System.Console.WriteLine("");
                     int inputNum = Convert.ToInt32(Console.ReadLine());
-                    matrix[i][j] = inputNum;
+                    matrix[j][k] = inputNum;
+                    }
                 }
             }
 

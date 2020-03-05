@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace BubbleSort
 {
@@ -13,6 +14,9 @@ namespace BubbleSort
 
             array = BubbleSort(array);
             DisplayArray(array);
+
+            // list version
+
 
 
 
@@ -57,5 +61,10 @@ namespace BubbleSort
             }
             System.Console.WriteLine();
         }
+
+       // static List<int> GetList()
+        // {
+
+        // }
     }
 }

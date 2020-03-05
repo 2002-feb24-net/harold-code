@@ -6,12 +6,17 @@ namespace AcronymConvert
     {
         static void Main(string[] args)
         {
+            
             string input;
             string output;
             input = GetInput();
             output = GenerateAcronym(input);
             Console.WriteLine("Acronym: " + "\n" +
             output);
+
+            /*var phrase = "We want a groovy keyboard.";
+            var position = phrase.IndexOf("groovy");
+            System.Console.WriteLine(position);*/
         }
 
         static string GetInput()
