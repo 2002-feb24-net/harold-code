@@ -33,7 +33,7 @@ namespace MergeSort
         {
             int length = end - start;
             int[] result = new int[length];
-            Array.Copy(original, result, length);
+            Array.Copy(original, start, result, 0, length);
             // Array.Copy(original, top.Length, bottom, 0, top.Length);
             // // destination index of bottom == 0
 
@@ -80,7 +80,7 @@ namespace MergeSort
                     array[i] = left[l];
                     l++;
                 }
-                else
+                else    // if (right[r] <= left[l])
                 {
                     array[i] = right[r];
                     r++;
