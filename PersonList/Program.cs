@@ -151,6 +151,10 @@ namespace PersonList
                 }
             }
         }
+        // The difference is that InsertSort will swap at
+        // different indeces while BubbleSort always 
+        //involves swapping between adjacent unsorted pairs. 
+        //The later is not necessarilly true for insertion sort
 
     }
 }
