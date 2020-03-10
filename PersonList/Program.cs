@@ -122,7 +122,7 @@ namespace PersonList
         {
             for (int i = 1; i < listOfPersons.Count; i++)
             {
-                var personAtIndex = listOfPersons[i];
+                Person personAtIndex = listOfPersons[i];
 
                 for (int l = 0; l < i; l++)
                 {
@@ -141,10 +141,11 @@ namespace PersonList
 
                     }
                     else */
-                    if ((personAtIndex.Name.CompareTo(listOfPersons[l])) > 0)
+                    if ((personAtIndex.Name.CompareTo(listOfPersons[l].Name)) < 0)
                     {
                         listOfPersons.Remove(personAtIndex);
                         listOfPersons.Insert(l, personAtIndex);
+                        break;
                     }
 
                 }
