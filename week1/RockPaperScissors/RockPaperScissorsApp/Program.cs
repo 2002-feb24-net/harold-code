@@ -1,18 +1,19 @@
 ﻿using System;
 
-namespace RockPaperScissors
+namespace RockPaperScissorsApp
 {
     class Program
     {
         static void Main(string[] args)
         {
-            RockPaperScissorsGame game = new RockPaperScissorsGame();
+            var game = new RockPaperScissorsGame();
 
             bool readyToQuit = false;
+
             while (!readyToQuit)
             {
-                System.Console.WriteLine("Do you want to play a round? (y/n)");
-                string input = Console.ReadLine();
+                Console.Write("Do you want to play a round? (y/n)");
+                var input = Console.ReadLine();
 
                 if (input == "n")
                 {
@@ -20,13 +21,14 @@ namespace RockPaperScissors
                 }
                 else
                 {
-                    System.Console.WriteLine();
                     game.PlayRound();
+                    // that method should play a round and print the result.
                 }
             }
 
             game.PrintSummary();
-            // how many wins, how many losses
+            // that method should print out a summary of the rounds.
+            // (how many wins, how many losses)
         }
     }
 }
