@@ -25,7 +25,8 @@ namespace Palindrome.test
         private void EmptyStringTest()
         {
             string empty = "";
-           Assert.False(palindromeCheckSpecific.IsPalindrome(empty));
+           Assert.True(palindromeCheckSpecific.IsPalindrome(empty));
+            // there is not really a correct answer to it. seems too much to say it does not apply
         }
 
         [Fact]

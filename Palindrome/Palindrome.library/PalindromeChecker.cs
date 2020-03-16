@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace Palindrome.library
 {
@@ -7,10 +8,20 @@ namespace Palindrome.library
         public bool IsPalindrome(string palindrome)
         {
             //lower case for comparison
-            palindrome.ToLower();
+            palindrome = palindrome.ToLower();
 
-            string first = palindrome.Substring(0, palindrome.Length / 2);
-            char[] arr = palindrome.ToCharArray();
+            var sb = new StringBuilder();
+            foreach (char c in palindrome)
+            {
+                if (!char.IsPunctuation(c))
+                    sb.Append(c);
+            }
+
+            string s = sb.ToString();
+
+
+            string first = s.Substring(0, s.Length / 2);
+            char[] arr = s.ToCharArray();
 
             Array.Reverse(arr);
 
