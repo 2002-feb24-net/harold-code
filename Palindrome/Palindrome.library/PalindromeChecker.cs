@@ -21,15 +21,15 @@ namespace Palindrome.library
             string s = sb.ToString();
 
 
-            string first = s.Substring(0, s.Length / 2);
+            //string first = s.Substring(0, s.Length / 2);
             char[] arr = s.ToCharArray();
 
             Array.Reverse(arr);
 
             string reversed = new string(arr);
-            string second = reversed.Substring(0, reversed.Length / 2);
+            //string second = reversed.Substring(0, reversed.Length / 2);
 
-            return first.Equals(second);
+            return s.Equals(reversed);
         }
     }
 }
