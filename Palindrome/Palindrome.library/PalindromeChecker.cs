@@ -13,9 +13,10 @@ namespace Palindrome.library
             var sb = new StringBuilder();
             foreach (char c in palindrome)
             {
-                if (!char.IsPunctuation(c))
+                if (char.IsLetterOrDigit(c))    // take out spaces and punctuation
                     sb.Append(c);
             }
+
 
             string s = sb.ToString();
 

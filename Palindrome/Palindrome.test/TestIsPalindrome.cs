@@ -47,5 +47,17 @@ namespace Palindrome.test
                 Assert.True(palindromeCheckSpecific.IsPalindrome(item));
             }
         }
+
+        [Theory]
+
+        [InlineData("nurses run", "racecaR", "1221", "never odd, or even.")]
+
+        private void TheoryYesPalindrome(params string[] input)
+        {
+            foreach (var item in input)
+            {
+                Assert.True(palindromeCheckSpecific.IsPalindrome(item));
+            }
+        }
     }
 }
