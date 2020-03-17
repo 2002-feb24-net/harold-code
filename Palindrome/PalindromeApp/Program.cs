@@ -13,22 +13,12 @@ namespace PalindromeApp
             Console.WriteLine("Enter a string to check if it's a palindrome");
             string input = Console.ReadLine();
 
-            bool isPalindrome = palindromeCheckGeneral.IsPalindrome(input);
-
-            if (isPalindrome == true)
-            {
-                Console.WriteLine($"{input} is a palindrome");
-            }
-            else
-            {
-                Console.WriteLine($"{input} is NOT a palindrome");
-            }
+            PalindromeCheckOutput(input, palindromeCheckGeneral);
         }
 
-        /* object ref error if called from main
-         * void isPalindromeOutput(string input, IIsPalindrome palindromeChecker)
+         static void PalindromeCheckOutput(string input, IIsPalindrome generalIsPalindrome)
         {
-            bool isPalindrome = palindromeChecker.IsPalindrome(input);
+            bool isPalindrome = generalIsPalindrome.IsPalindrome(input);
 
             if (isPalindrome == true)
             {
@@ -39,7 +29,7 @@ namespace PalindromeApp
                 Console.WriteLine($"{input} is NOT a palindrome");
             }
 
-        }*/
+        }
     }
     }
 

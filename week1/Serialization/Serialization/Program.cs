@@ -30,7 +30,8 @@ namespace Serialization
                 // file does exist so can read
 
                 // read JSON from the file and deserialize it
-                string fileData = ReadFromFileAsync(filepath);
+                var fileDataTask =   ReadFromFileAsync(filepath);
+                var fileData =  fileDataTask;
                 List<Person> deserializedList = DeSerialize(fileData);
                 ModifyPersons(deserializedList);
                 string json2 = ConvertToJson(deserializedList);
