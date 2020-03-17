@@ -7,8 +7,7 @@ namespace PalindromeApp
     {
         static void Main(string[] args)
         {
-            PalindromeChecker palindromeCheckSpecific = new PalindromeChecker();
-            IIsPalindrome palindromeCheckGeneral = palindromeCheckSpecific; // upcasting
+           IIsPalindrome palindromeCheckGeneral = new PalindromeChecker(); ; // upcasting
 
             Console.WriteLine("Enter a string to check if it's a palindrome");
             string input = Console.ReadLine();
