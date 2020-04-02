@@ -1,0 +1,28 @@
+body {
+    background-color: lightblue;
+  }
+  
+  h1 {
+    color: blue;
+    margin-left: 20px;
+   
+  }
+  p{
+      color:navy
+      border
+  }
+  th{
+      color:red
+      
+  }
+  li{
+      position: 80;
+  }
+  
+  table{
+      border-style: dotted;
+  }
+  href{
+      a:hover;color:hotpink
+
+  }
