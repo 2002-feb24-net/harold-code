@@ -1,15 +1,16 @@
-﻿using NotesService.Api.Models;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using NotesService.Api.Models;
 
 namespace NotesService.Api.Repositories
 {
     public interface INoteRepository
     {
         void Add(Note note);
+
         IEnumerable<Note> GetAll();
+
         Note GetById(int id);
-        void Remove(int id);
-        void Update(int id, Note note);
-        public void RemoveAll();
+
+        void Remove(Note note);
     }
 }

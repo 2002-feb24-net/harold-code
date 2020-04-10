@@ -46,6 +46,11 @@ namespace NotesService.Api.Repositories
             _data.Remove(note);
         }
 
+        public void RemoveAll()
+        {
+            _data.Clear();
+        }
+
         /// <summary>
         /// Updates an element from the persistent list
         /// </summary>

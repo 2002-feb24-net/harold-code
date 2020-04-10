@@ -32,7 +32,7 @@ namespace NotesService.Api.Controllers
             // (200 OK response, with the notes serialized in the response body -- instead of some view's HTML)
         }
 
-        // GET: localhost.com:9999/api/notes/5
+        // GET: api/notes/5
         [HttpGet("{id}")] // 1. this action method's route will append
                                         // "/{id}" to the controller's overall route, where id is a route parameter
                                         // 2. the route's name is "Get" so it can be referenced elsewhere
@@ -56,37 +56,35 @@ namespace NotesService.Api.Controllers
             return CreatedAtAction(nameof(GetById), new { id = note.Id }, note);
         }
 
+        // ignores changing the tags
         // PUT: api/notes/5
         [HttpPut("{id}")]
         public IActionResult Put(int id, [FromBody] Note note)
         {
-            _noteRepository.Update(id, note);
-            // return updated note
-            return Ok(CreatedAtAction(nameof(Put), new { id = note.Id }, note));
+            // successful update for PUT returns 204 No Content with empty body, or 200 OK
+            if (_noteRepository.GetById(id) is Note oldNote)
+            {
+                oldNote.DateModified = DateTime.Now;
+                oldNote.Author = note.Author;
+                oldNote.IsPublic = note.IsPublic;
+                oldNote.Text = note.Text;
+                return NoContent();
+                //return StatusCode(204);
+            }
+            return NotFound();
         }
 
         // DELETE: api/notes/5
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
+            // successful DELETE returns 204 No Content with empty body
             if (_noteRepository.GetById(id) is Note note)
             {
-                _noteRepository.Remove(id);
-
-                return Ok(Get());
+                _noteRepository.Remove(note);
+                return NoContent();
             }
-            else
-                return NotFound(); // 404 Not Found response 
-            // confirmation "page" is the whole list
-
-        }
-
-        [HttpDelete]
-        public IActionResult DeleteAllNotes()
-        {
-            _noteRepository.RemoveAll();
-
-            return StatusCode(204); // delete successful
+            return NotFound();
         }
     }
 }
