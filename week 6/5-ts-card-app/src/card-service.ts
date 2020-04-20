@@ -7,8 +7,18 @@ export default class CardService {
 
     
 
-    newDeck(): Promise<Response> {
-        return fetch('https://deckofcardsapi.com/api/deck/new/');
+    newDeck(): Promise<void> {
+        return fetch('https://deckofcardsapi.com/api/deck/new/', {
+            method: 'POST',
+            headers: {
+                'Accept' : 'Application/json'
+            }
+
+        })
+            .then(response => response.json())
+            .then(responseObj => {
+                this.current
+            })
         
     }
 
